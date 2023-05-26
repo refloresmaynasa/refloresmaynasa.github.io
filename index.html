@@ -7,150 +7,383 @@
   <title>Resume - Ricardo Flores</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/cc05ecf1ea.js" crossorigin="anonymous"></script>
-</head>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+
 <body>
   <header id="header">
     <div class="container">
       <nav>
-        <img src="images/logo.png" class="logo">
+        <a href="#home"><img src="images/logo.png" class="logo"></a>
         <ul id="sidemenu">
-          <li><a href="#header">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
           <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
         <i class="fa-solid fa-bars" onclick="openmenu()"></i>
       </nav>
-      <div class="header-text">
-        <p>Software Developer</p>
-        <h1>Hi, I'm <span>Ricardo</span> <br>Flores from Bolivia</h1>
-      </div>
     </div>
   </header>
-  <!-- -----------about-------------- -->
-  <div id="about">
+  <!-- -----------home-------------- -->
+  <section id="home">
     <div class="container">
       <div class="row">
-        <div class="about-col-1">
-          <img src="images/user.png">
+        <div class="home-col-1">
+          <img src="images/user.jpg">
         </div>
-        <div class="about-col-2">
-          <h1 class="sub-title">About me</h1>
-          <p>I'm a software developer with 10+ years of experience in developing and maintaining enterprise-level 
-            applications, using current technologies y programming languages such as Java and C#.Net, and 
-            participating in every stage of the life cycle of software development, including design, coding, 
-            debugging, testing, and maintenance. <br><br>
-            I'm passionate about developing and maintaining systems, trying to collaborate with my teammates, 
-            and delivering solutions to assist customers to achieve their goals.
-            </p>
-
-            <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-              <p class="tab-links" onclick="opentab('experience')">Experience</p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
-            </div>
-            <div class="tab-contents active-tab" id="skills">
-              <ul>
-                <li><span>Software Deveoloper</span><br>Designing and develop Web Applications</li>
-                <li><span>Design DB</span><br>Designing and develop Web Applications</li>
-                <li><span>Docker</span><br>Tool to develop a software</li>
-              </ul>
-            </div>
-            <div class="tab-contents" id="experience">
-              <ul>
-                <li><span>2017 - now</span><br>Designing and develop Web Applications</li>
-                <li><span>2016 - 2017</span><br>Designing and develop Web Applications</li>
-                <li><span>2009 - 2016</span><br>Tool to develop a software</li>
-              </ul>
-            </div>
-            <div class="tab-contents" id="education">
-              <ul>
-                <li><span>2012</span><br>Designing and develop Web Applications</li>
-                <li><span>2006</span><br>Designing and develop Web Applications</li>
-                <li><span>2000</span><br>Tool to develop a software</li>
-              </ul>
-            </div>
+        <div class="home-col-2">
+          <h1 class="sub-title">Ricardo Edwin Flores Maynasa</h1>
+          <h2>Software developer</h2>
+          <article>
+            <p><i class="fa-solid fa-square-phone"></i> <span class="label-bold">Phone: </span><br>
+            (591) 79113527</p>
+          </article>
+          <article>
+            <p><i class="fa-solid fa-envelope"></i> <span class="label-bold">Email: </span><br>
+            ricky.reflores@gmail.com</p>
+          </article>
+          <article class="social-icons">
+            <a href="https://www.facebook.com/RicardoFloresMaynasa" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/ricardo-flores-maynasa/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/refloresmaynasa" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </article>
         </div>
       </div>
     </div>
-  </div>
-  <!-- -------------------services---------------- -->
-  <div id="services">
+    <div class="row">
+      <article class="about">
+        <h1 class="sub-title">Hello! I'm <span>Ricardo</span></h1><br>
+        <p>I'm a software developer with 10+ years of experience in developing and maintaining enterprise-level 
+          applications, using current technologies y programming languages such as Java and C#.Net, and 
+          participating in every stage of the life cycle of software development, including design, coding, 
+          debugging, testing, and maintenance. <br><br>
+          I'm passionate about developing and maintaining systems, trying to collaborate with my teammates, 
+          and delivering solutions to assist customers to achieve their goals.
+          </p>
+      </article>
+    </div>
+  </section>
+  <!-- -----------experience------------ -->
+  <section id="experience">
     <div class="container">
-      <h1 class="sub-title">My Services</h1>
-      <div class="services-list">
-        <div>
+      <h1 class="sub-title">Work Experience</h1>
+      <article>
+        <div class="row">
+          <div class="exp-col-1">Apr 2020 – Present</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3 label-bold">Mojix Inc. / Towbook</div>
+        </div>
+        <div class="row">
+          <div class="exp-col-1"><span class="label-bold">Software Developer</span><br>Remote</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3">Develop, update, and maintain advanced towing software in .Net Framework, ASP.Net MVC, SQL Server, Cosmos DB, and Service Bus to integrate the different background services. <br>
+            Migrate and upgrade library, services, and ASP.Net projects in .Net Framework to projects in .Net Standard and .Net 7, to deploy the services on Azure Kubernetes (AKS) using GitHub Actions.
+            </div>
+        </div>
+      </article>
+      <article>
+        <div class="row">
+          <div class="exp-col-1">Apr 2020 – Feb 2023</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3 label-bold">Hakan Solutions</div>
+        </div>
+        <div class="row">
+          <div class="exp-col-1"><span class="label-bold">Freelance Backend Developer </span><br>
+          Remote</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3">Build backend services for small fintech projects such as confirming, insurance, and SAC system for the sale of vehicles using the Java language (Quarkus) and PostgreSQL database, integrating with Keycloak as an identity and access manager. <br>
+            Build a Notification service to send SMS and email messages in Java (Quarkus) with Twilio and Amazon Simple Email Service (SES). <br>
+            Coordinated with front-end and mobile developers to integrate the backend services. <br>
+            Build a backend service in Java to consume Libranda API and integrate it with a Woocommerce of Ebooks, build some PHP scripts to interact with backend service to sync the publications, simulate a sell, sell, and download a publication (book).
+            </div>
+        </div>
+      </article>
+      <article>
+        <div class="row">
+          <div class="exp-col-1">Sep 2017 – Apr 2020</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3 label-bold">CODE ROAD S.R.L. (Mojix Inc.)</div>
+        </div>
+        <div class="row">
+          <div class="exp-col-1"><span class="label-bold">Software Engineer</span><br>
+            La Paz - Bolivia</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3">Develop and maintain the backend Rest API of the IOT platform in Java and Spring Framework, using Mongo DB, MySQL database, and Apache Kafka. <br>
+            Code scripts for MongoDB. <br>
+            Code Python scripts to migrate data between different versions of platforms and systems. <br>
+            Coordinated with QA and DevOps teams to implement the built solutions.
+            </div>
+        </div>
+      </article>
+      <article>
+        <div class="row">
+          <div class="exp-col-1">Apr 2016 - Aug 2017</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3 label-bold">Ideati – Get Better Consortium</div>
+        </div>
+        <div class="row">
+          <div class="exp-col-1"><span class="label-bold">Consultant / Senior Developer</span><br>
+            Managua - Nicaragua</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3">Design and develop a Tax Audit System for "Direccion General de Ingresos" (DGI) of Nicaragua with DDD design architecture, Repository, and Unit of Work patterns, in .Net Framework, Entity Framework, ASP.Net MVC, SQL Server, Telerik UI library and Bootstrap frontend toolkit. <br>
+            Designed and built a Reporting solution with Reporting Services.
+            </div>
+        </div>
+      </article>
+      <article>
+        <div class="row">
+          <div class="exp-col-1">Jul 2009 - Apr 2016</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3 label-bold">Servicio de Impuestos Nacionales</div>
+        </div>
+        <div class="row">
+          <div class="exp-col-1"><span class="label-bold">Consultant / Senior Developer</span><br>
+            La Paz - Bolivia</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3">Design and develop "Galileo" – “Modelo de Administración del Sistema Impositivo” (MASI) project, a model that aims to improve the efficiency and effectiveness of the Tax Administration that is based on the Business Process Management (BPM) methodology with technologies .Net Framework (C#), Oracle database, and WCF. <br>
+            Design and develop the BPM process engine using the XPDL standardized language. <br>
+            Modeling the BPM process to register taxpayers. <br>
+            Modeling the BPM process of the payment facility. <br>
+            Make and layout dynamic views with HTML, CSS, and XSLT into BPM modeling. <br>
+            Training on architecture and tools developed for this system. <br>
+            Coordinate junior developers' tasks and activities.
+            </div>
+        </div>
+      </article>
+      <article>
+        <div class="row">
+          <div class="exp-col-1">May 2008 - Jul 2009</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3 label-bold">Banco de Credito (BCP)</div>
+        </div>
+        <div class="row">
+          <div class="exp-col-1"><span class="label-bold">Technical Analyst III</span><br>
+            La Paz - Bolivia</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3">Maintain and develop features for Internet Banking projects that include account management and banking operations, applying CMMI methodology and the Service-oriented Architecture in .Net Framework (C#), Windows Communication Foundation (WCF), and SQL Server. <br>
+            Design and develop  Stored Procedures in the database. <br>
+            Make and layout views with HTML and CSS.
+            </div>
+        </div>
+      </article>
+      <article>
+        <div class="row">
+          <div class="exp-col-1">Nov 2007 - May 2008</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3 label-bold">Yacimientos Petroliferos Fiscales Bolivianos (YPFB)</div>
+        </div>
+        <div class="row">
+          <div class="exp-col-1"><span class="label-bold">Consultant Software Developer</span><br>
+            La Paz - Bolivia</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3">Develop Accounting, Human Resources, and Billing systems projects, that were implemented in different areas of the company business solutions in .Net Framework (C#), LLGenPro, and Infragistic library. <br>
+            Design and develop solutions (projects) with Cake PHP and ExtJS framework.
+            </div>
+        </div>
+      </article>
+      <article>
+        <div class="row">
+          <div class="exp-col-1">Jan 2007 - Nov 2007</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3 label-bold">Answer Consulting Group S.R.L.</div>
+        </div>
+        <div class="row">
+          <div class="exp-col-1"><span class="label-bold">IT Product Specialist </span><br>
+            La Paz - Bolivia</div>
+          <div class="exp-col-2"></div>
+          <div class="exp-col-3">Developed an accounting system and a tourist operations system for Crillon Tours company in .Net Framework and SQL Server. <br>
+            Developed a documentary system (USAID project) for the "Vice-Presidencia de la Republica de Bolivia" in .Net Framework and SQL Server. <br>
+            Training on applications developed.
+            </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- -----------skills-------------- -->
+  <section id="skills">
+    <div class="container">
+      <h1 class="sub-title">Skills</h1>
+      <div class="main-skill-list">
+        <article>
           <i class="fa-solid fa-code"></i>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt purus et lectus 
-            ultrices, a mollis lectus varius. Aenean euismod finibus leo, id pretium libero gravida non</p>
-          <a href="#">Learn more</a>
+          <h2>Microsoft .NET</h2>
+          <ul>
+            <li>.Net 7</li>
+            <li>.Net Core</li>
+            <li>.Net Framework</li>
+            <li>MVC</li>
+            <a href="#other-skills">More ...</a>
+          </ul>
+        </article>
+        <article>
+          <i class="fa-brands fa-java"></i>
+          <h2>Java</h2>
+          <ul>
+            <li>Quarkus</li>
+            <li>Spring</li>
+            <li>Sprign Boot</li>
+            <li>Hibernate</li>
+            <a href="#other-skills">More ...</a>
+          </ul>
+        </article>
+        <article>
+          <i class="fa-solid fa-database"></i>
+          <h2>Databases</h2>
+          <ul>
+            <li>Microsoft SQL Server</li>
+            <li>PostgreSQL</li>
+            <li>CosmosDB</li>
+            <li>MongoDB</li>
+            <a href="#other-skills">More ...</a>
+          </ul>
+        </article>
+        <article>
+          <i class="fa-solid fa-gear"></i>
+          <h2>Tools</h2>
+          <ul>
+            <li>Git</li>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+            <li>Azure</li>
+            <a href="#other-skills">More ...</a>
+          </ul>
+        </article>
+      </div>
+      <div class="other-skill-list" id="other-skills">
+        <h2>More skills ...</h2>
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('languages')">Programming Languages</p>
+          <p class="tab-links" onclick="opentab('databases')">Databases</p>
+          <p class="tab-links" onclick="opentab('technologies')">Technologies and Programs</p>
+          <p class="tab-links" onclick="opentab('systems')">Systems</p>
+          <p class="tab-links" onclick="opentab('softskills')">Soft skills</p>
         </div>
-        <div>
-          <i class="fa-solid fa-crop"></i>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt purus et lectus 
-            ultrices, a mollis lectus varius. Aenean euismod finibus leo, id pretium libero gravida non</p>
-          <a href="#">Learn more</a>
-        </div>
-        <div>
-          <i class="fa-brands fa-app-store"></i>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt purus et lectus 
-            ultrices, a mollis lectus varius. Aenean euismod finibus leo, id pretium libero gravida non</p>
-          <a href="#">Learn more</a>
-          </div>
+        <article class="tab-contents active-tab" id="languages">
+          <ul>
+            <li><i class="fa-solid fa-code"></i>  C#  (.Net Framework, .Net Core)</li>
+            <li><i class="fa-brands fa-java"></i>  Java (Spring, Quarkus)</li>
+            <li><i class="fa-solid fa-code"></i>  SQL</li>
+            <li><i class="fa-brands fa-square-js"></i>  Javascript</li>
+            <li><i class="fa-brands fa-php"></i>  PHP</li>
+            <li><i class="fa-brands fa-python"></i>  Python</li>
+            <li><i class="fa-solid fa-code"></i>  TypeScript</li>
+          </ul>
+        </article>
+        <article class="tab-contents" id="databases">
+          <ul>
+            <li><i class="fa-solid fa-database"></i>  Microsoft SQL Server</li>
+            <li><i class="fa-solid fa-database"></i>  Cosmos DB</li>
+            <li><i class="fa-solid fa-database"></i>  MySQL</li>
+            <li><i class="fa-solid fa-database"></i>  PostgreSQL</li>
+            <li><i class="fa-solid fa-database"></i>  Oracle</li>
+            <li><i class="fa-solid fa-database"></i>  Redis</li>
+          </ul>
+        </article>
+        <article class="tab-contents" id="technologies">
+          <ul>
+            <li><i class="fa-solid fa-gear"></i>  Microsoft Visual Studio</li>
+            <li><i class="fa-solid fa-gear"></i>  Visual Studio Code</li>
+            <li><i class="fa-solid fa-gear"></i>  IntelliJ IDEA</li>
+            <li><i class="fa-solid fa-gear"></i>  API REST</li>
+            <li><i class="fa-solid fa-gear"></i>  Docker/Docker-Compose</li>
+            <li><i class="fa-brands fa-git"></i>  Git/GitHub</li>
+            <li><i class="fa-solid fa-gear"></i>  Azure</li>
+            <li><i class="fa-solid fa-gear"></i>  Kubernetes</li>
+            <li><i class="fa-solid fa-gear"></i>  CI/CD</li>
+            <li><i class="fa-solid fa-gear"></i>  GitHub Actions</li>
+            <li><i class="fa-solid fa-gear"></i>  Postman</li>
+          </ul>
+        </article>
+        <article class="tab-contents" id="systems">
+          <ul>
+            <li><i class="fa-brands fa-linux"></i>  Linux</li>
+            <li><i class="fa-brands fa-windows"></i>  Windows</li>
+          </ul>
+        </article>
+        <article class="tab-contents" id="softskills">
+          <ul>
+            <li><i class="fa-solid fa-user-tie"></i>  Adaptable and Flexible</li>
+            <li><i class="fa-solid fa-user-tie"></i>  Problem-solving</li>
+            <li><i class="fa-solid fa-user-tie"></i>  Teamwork and communication</li>
+            <li><i class="fa-solid fa-user-tie"></i>  Analytical thinking</li>
+            <li><i class="fa-solid fa-user-tie"></i>  Responsibility</li>
+          </ul>
+        </article>
       </div>
     </div>
-  </div>
-  <!-- ----------------portfolio----------------- -->
-  <div id="portfolio">
+  </section>
+  <!-- -----------education-------------- -->
+  <section id="education">
     <div class="container">
-      <h1 class="sub-title">My Work</h1>
-      <div class="work-list">
-        <div class="work">
-          <img src="images/work-1.png">
-          <div class="layer">
-            <h3>First work in</h3>
-            <p>There is no one who loves pain itself, who seeks after it and wants to have it, 
-              simply because it is pain...</p>
-          </div>
+      <h1 class="sub-title">Education</h1>
+      <article>
+        <div class="row">
+          <div class="edu-col-1">2012</div>
+          <div class="edu-col-2"></div>
+          <div class="edu-col-3 label-bold">CERTIFICATION</div>
         </div>
-        <div class="work">
-          <img src="images/work-2.png">
-          <div class="layer">
-            <h3>First work in</h3>
-            <p>There is no one who loves pain itself, who seeks after it and wants to have it, 
-              simply because it is pain...</p>
-          </div>
+        <div class="row">
+          <div class="edu-col-1"><span class="label-bold">Certified ScrumMaster (SCM)</span></div>
+          <div class="edu-col-2"></div>
+          <div class="edu-col-3">Scrum Alliance</div>
         </div>
-        <div class="work">
-          <img src="images/work-3.png">
-          <div class="layer">
-            <h3>First work in</h3>
-            <p>There is no one who loves pain itself, who seeks after it and wants to have it, 
-              simply because it is pain...</p>
-          </div>
+      </article>
+      <article>
+        <div class="row">
+          <div class="edu-col-1">2012</div>
+          <div class="edu-col-2"></div>
+          <div class="edu-col-3 label-bold">UNIVERSITY</div>
         </div>
-      </div>
-      <a href="#" class="btn">See more</a>
+        <div class="row">
+          <div class="edu-col-1"><span class="label-bold">Security Management and Systems Audit Diploma</span></div>
+          <div class="edu-col-2"></div>
+          <div class="edu-col-3">Universidad de Los Andes</div>
+        </div>
+      </article>
+      <article>
+        <div class="row">
+          <div class="edu-col-1">2001 – 2006</div>
+          <div class="edu-col-2"></div>
+          <div class="edu-col-3 label-bold">UNIVERSITY</div>
+        </div>
+        <div class="row">
+          <div class="edu-col-1"><span class="label-bold">System Engineering Degree</span></div>
+          <div class="edu-col-2"></div>
+          <div class="edu-col-3">Universidad Católica Boliviana “San Pablo”</div>
+        </div>
+      </article>
+      <article>
+        <div class="row">
+          <div class="edu-col-1">1994 - 2000</div>
+          <div class="edu-col-2"></div>
+          <div class="edu-col-3 label-bold">HIGH SCHOOL</div>
+        </div>
+        <div class="row">
+          <div class="edu-col-1"><span class="label-bold">High School Diploma</span></div>
+          <div class="edu-col-2"></div>
+          <div class="edu-col-3">Unidad Educativo "Nueva Jerusalén"</div>
+        </div>
+      </article>
     </div>
-  </div>
+  </section>
   <!-- -------------------contact----------------- -->
   <div id="contact">
     <div class="container">
       <div class="row">
         <div class="contact-left">
           <h1 class="sub-title">Contact Me</h1>
-          <p><i class="fa-solid fa-envelope"></i> contact@example.com</p>
-          <p><i class="fa-solid fa-square-phone"></i> 0123456789</p>
+          <p><i class="fa-solid fa-envelope"></i> ricky.reflores@gmail.com</p>
+          <p><i class="fa-solid fa-square-phone"></i>(591) 79113527</p>
           <div class="social-icons">
-            <a href="facebook"><i class="fa-brands fa-square-facebook"></i></a>
-            <a href="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/RicardoFloresMaynasa" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/ricardo-flores-maynasa/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/refloresmaynasa" target="_blank"><i class="fa-brands fa-github"></i></a>
           </div>
-          <a href="images/logo.png" download class="btn btn2">Download CV</a>
+          <a href="images/CV-Ricardo-Flores.pdf" download class="btn btn2">Download CV</a>
         </div>
         <div class="contact-right">
           <form name="submit-to-google-sheet">
