@@ -1,5 +1,55 @@
 /* Shared resume pages stylesheet */
 
+.utility-controls {
+  position: fixed;
+  top: 14px;
+  right: 16px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(31, 42, 55, 0.14);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(22, 34, 44, 0.16);
+}
+
+.utility-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(31, 42, 55, 0.16);
+  background: #fff;
+  color: #263542;
+  font: inherit;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.utility-btn:hover {
+  background: #f2f7fb;
+  border-color: rgba(66, 128, 158, 0.5);
+  box-shadow: 0 6px 16px rgba(33, 73, 95, 0.2);
+}
+
+.utility-btn:focus-visible {
+  outline: 2px solid #5f9fba;
+  outline-offset: 2px;
+}
+
+.toggle-icon {
+  line-height: 1;
+  font-size: 0.95rem;
+  min-width: 1.5em;
+  text-align: center;
+}
+
 /* ============================================================
    Summary Resume Page
 ============================================================ */
@@ -243,6 +293,23 @@
   --paper: #15212c;
   background: #0b1117;
 }
+
+.summary-page.dark-theme .utility-controls {
+  background: rgba(12, 21, 29, 0.88);
+  border-color: rgba(141, 179, 198, 0.22);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+}
+
+.summary-page.dark-theme .utility-btn {
+  background: #1b2a36;
+  color: #d6e5ef;
+  border-color: #2c4658;
+}
+
+.summary-page.dark-theme .utility-btn:hover {
+  background: #243949;
+  border-color: #3f6074;
+}
 .summary-page.dark-theme .page {
   box-shadow: 0 14px 38px rgba(0, 0, 0, 0.45);
 }
@@ -350,6 +417,18 @@
 }
 
 @media (max-width: 760px) {
+  .utility-controls {
+    top: 10px;
+    right: 10px;
+    gap: 6px;
+    padding: 5px;
+  }
+
+  .utility-btn {
+    width: 32px;
+    height: 32px;
+  }
+
   .summary-page .page {
     grid-template-columns: 1fr;
     width: 100%;
@@ -379,6 +458,10 @@
   }
 
   .summary-page .action-group {
+    display: none;
+  }
+
+  .utility-controls {
     display: none;
   }
 
@@ -660,6 +743,23 @@
   --line: #2a3b49;
   --shadow-lg: 0 26px 56px rgba(0, 0, 0, 0.45);
   --shadow-sm: 0 10px 24px rgba(0, 0, 0, 0.32);
+}
+
+.detailed-page.dark-theme .utility-controls {
+  background: rgba(11, 20, 28, 0.9);
+  border-color: rgba(142, 189, 210, 0.2);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.34);
+}
+
+.detailed-page.dark-theme .utility-btn {
+  background: #182734;
+  color: #d4e8f3;
+  border-color: #2f485b;
+}
+
+.detailed-page.dark-theme .utility-btn:hover {
+  background: #223748;
+  border-color: #43637a;
 }
 
 .detailed-page .cv {

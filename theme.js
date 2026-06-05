@@ -32,11 +32,17 @@
       var titleLight = button.getAttribute("data-title-light") || "Switch to light mode";
 
       button.setAttribute("aria-pressed", isDark ? "true" : "false");
+      button.setAttribute("aria-label", isDark ? titleLight : titleDark);
       button.setAttribute("title", isDark ? titleLight : titleDark);
 
       var label = button.querySelector("span");
       if (label) {
         label.textContent = isDark ? lightLabel : darkLabel;
+      }
+
+      var icon = button.querySelector(".toggle-icon");
+      if (icon) {
+        icon.textContent = isDark ? "☀" : "☾";
       }
     }
   }

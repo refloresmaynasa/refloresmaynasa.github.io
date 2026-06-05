@@ -218,11 +218,18 @@
     for (var i = 0; i < buttons.length; i += 1) {
       var button = buttons[i];
       button.setAttribute("aria-pressed", isEs ? "true" : "false");
-      button.setAttribute("title", isEs ? "Switch to English" : "Cambiar a Espanol");
+      var title = isEs ? "Switch to English" : "Cambiar a Espanol";
+      button.setAttribute("title", title);
+      button.setAttribute("aria-label", title);
 
       var label = button.querySelector("span");
       if (label) {
         label.textContent = isEs ? "English" : "Espanol";
+      }
+
+      var icon = button.querySelector(".toggle-icon");
+      if (icon) {
+        icon.textContent = isEs ? "ES" : "EN";
       }
     }
   }
