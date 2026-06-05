@@ -226,6 +226,37 @@
   background: #1f2c34;
   box-shadow: 0 12px 24px rgba(43, 58, 69, 0.26);
 }
+.summary-page .theme-toggle {
+  font-family: inherit;
+}
+.summary-page.dark-theme {
+  --sidebar-bg: #0f1720;
+  --sidebar-bg-2: #111b25;
+  --accent: #66b2d1;
+  --text-dark: #e6edf4;
+  --text-muted: #afbcc8;
+  --line: #2c3b47;
+  --paper: #15212c;
+  background: #0b1117;
+}
+.summary-page.dark-theme .page {
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.45);
+}
+.summary-page.dark-theme .item::before {
+  box-shadow: 0 0 0 3px #15212c;
+}
+.summary-page.dark-theme .tag {
+  background: rgba(140, 181, 202, 0.12);
+  border: 1px solid rgba(140, 181, 202, 0.18);
+}
+.summary-page.dark-theme .action-link.secondary,
+.summary-page.dark-theme .action-button.secondary {
+  background: #25323d;
+}
+.summary-page.dark-theme .action-link.secondary:hover,
+.summary-page.dark-theme .action-button.secondary:hover {
+  background: #314451;
+}
 
 .summary-page .section-title {
   display: flex;
@@ -332,6 +363,17 @@
     -webkit-print-color-adjust: exact;
   }
 
+  .summary-page,
+  .summary-page.dark-theme {
+    --sidebar-bg: #f4f4f4;
+    --sidebar-bg-2: #f4f4f4;
+    --accent: #111;
+    --text-dark: #111;
+    --text-muted: #333;
+    --line: #cfcfcf;
+    --paper: #ffffff;
+  }
+
   .summary-page .action-group {
     display: none;
   }
@@ -342,6 +384,7 @@
     margin: 0;
     box-shadow: none;
     border: 1px solid #111;
+    background: #fff;
     grid-template-columns: 30% 70% !important;
     break-inside: avoid;
     page-break-inside: avoid;
@@ -537,6 +580,30 @@
     size: Letter;
     margin: 3mm;
   }
+
+  .detailed-page,
+  .detailed-page.dark-theme {
+    --bg: #ffffff;
+    --bg-shape: #ffffff;
+    --surface: #ffffff;
+    --surface-soft: #f5f7f9;
+    --ink: #1f2a37;
+    --muted: #5b6b7a;
+    --accent: #2f8db4;
+    --accent-strong: #1f6f90;
+    --line: #d5e0e8;
+    background: #fff;
+  }
+
+  .detailed-page .cv,
+  .detailed-page .hero,
+  .detailed-page .panel,
+  .detailed-page .job,
+  .detailed-page .project,
+  .detailed-page .identity,
+  .detailed-page .stat {
+    background: #fff;
+  }
 }
 
 /* ============================================================
@@ -576,6 +643,19 @@
   font-family: "Quicksand", sans-serif;
   --motion-fast: 180ms ease;
   --motion-mid: 260ms ease;
+}
+.detailed-page.dark-theme {
+  --bg: #0a1118;
+  --bg-shape: #182633;
+  --surface: #111b24;
+  --surface-soft: #172532;
+  --ink: #e5edf4;
+  --muted: #aab8c5;
+  --accent: #5ca6c6;
+  --accent-strong: #8bc2da;
+  --line: #2a3b49;
+  --shadow-lg: 0 26px 56px rgba(0, 0, 0, 0.45);
+  --shadow-sm: 0 10px 24px rgba(0, 0, 0, 0.32);
 }
 
 .detailed-page .cv {
@@ -677,6 +757,91 @@
   text-transform: uppercase;
   border: 1px solid var(--line);
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.detailed-page .theme-toggle {
+  font-family: inherit;
+  cursor: pointer;
+}
+.detailed-page.dark-theme .action-link.secondary {
+  background: #1a2a37;
+  color: #c4d9e5;
+  border-color: #2b4151;
+}
+.detailed-page.dark-theme .action-link.secondary:hover {
+  background: #213545;
+  border-color: #365266;
+}
+
+.detailed-page.dark-theme .hero {
+  background: linear-gradient(125deg, #0f1821 0%, #14212c 52%, #182836 100%);
+}
+
+.detailed-page.dark-theme .identity:hover {
+  border-color: #2f4a5c;
+  background: #15222d;
+}
+
+.detailed-page.dark-theme .contact-item {
+  background: rgba(20, 33, 44, 0.9);
+}
+
+.detailed-page.dark-theme .contact-item:hover {
+  background: rgba(24, 40, 53, 0.96);
+  border-color: #355267;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.detailed-page.dark-theme .stat:hover {
+  background: #152430;
+  border-color: #355268;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.24);
+}
+
+.detailed-page.dark-theme .panel:hover {
+  background: #14222d;
+  border-color: #355268;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.26);
+}
+
+.detailed-page.dark-theme .skills-cloud span:hover {
+  background: #1c2f3d;
+  border-color: #38566b;
+  color: #c7d9e5;
+}
+
+.detailed-page.dark-theme .skills-cloud a:hover {
+  color: #9ed1e7;
+}
+
+.detailed-page.dark-theme .job:hover {
+  background: #152430;
+  border-color: #355268;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.24);
+}
+
+.detailed-page.dark-theme .project:hover {
+  background: #152430;
+  border-color: #355268;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
+}
+
+.detailed-page.dark-theme .identity img {
+  border-color: #223646;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+}
+.detailed-page.dark-theme .job::before {
+  box-shadow: 0 0 0 4px #14212d;
+}
+.detailed-page.dark-theme .project-tags span {
+  background: #1b3142;
+  color: #9fd0e6;
+  border-color: #325167;
+}
+
+.detailed-page.dark-theme .project:hover .project-tags span {
+  background: #234057;
+  color: #c5e3f2;
+  border-color: #3f647d;
 }
 
 .detailed-page .action-link.primary {
