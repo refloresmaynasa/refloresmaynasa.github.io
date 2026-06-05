@@ -7,13 +7,21 @@
 <link rel="stylesheet" href="style.css" />
 </head>
 <body class="summary-page">
+  <div class="utility-controls" aria-label="Page controls">
+    <button class="utility-btn theme-toggle" type="button" aria-pressed="false" title="Switch theme" aria-label="Switch theme">
+      <span class="toggle-icon" aria-hidden="true">☾</span>
+    </button>
+    <button class="utility-btn lang-toggle" type="button" aria-pressed="false" title="Switch language" aria-label="Switch language">
+      <span class="toggle-icon" aria-hidden="true">EN</span>
+    </button>
+  </div>
   <div class="page">
     <aside class="sidebar">
       <img class="avatar" src="images/user.jpg" alt="Ricardo Flores" />
 
       <div class="side-block">
-        <h2>Contact</h2>
-        <div class="contact-item"><span class="ico">A</span>La Paz, Bolivia</span></div>
+        <h2 data-i18n="summary.contact">Contact</h2>
+        <div class="contact-item"><span class="ico">A</span><span>La Paz, Bolivia</span></div>
         <div class="contact-item"><span class="ico">P</span><span>+591 79113527</span></div>
         <div class="contact-item"><span class="ico">E</span><a href="mailto:ricky.reflores@gmail.com">ricky.reflores@gmail.com</a></div>
         <div class="contact-item"><span class="ico">E</span><a href="mailto:ricky_efm@hotmail.com">ricky_efm@hotmail.com</a></div>
@@ -22,7 +30,7 @@
       </div>
 
       <div class="side-block">
-        <h2>Top Skills</h2>
+        <h2 data-i18n="summary.topSkills">Top Skills</h2>
         <div class="skill">
           <div class="skill-name"><span>C# / .NET Core</span></div>
           <div class="bar"><span style="width:95%"></span></div>
@@ -45,8 +53,8 @@
         </div>
       </div>
 
-      <div class="side-block">
-        <h2>Technologies</h2>
+      <div class="side-block technologies-block">
+        <h2 data-i18n="summary.technologies">Technologies</h2>
         <div class="tag-list">
           <span class="tag">.NET 8</span>
           <span class="tag">Cosmos DB</span>
@@ -64,35 +72,41 @@
         </div>
       </div>
 
-      <div class="side-block">
-        <h2>Education</h2>
-        <div class="contact-item" style="display:block">
-          <strong style="color:#fff">Certified ScrumMaster (CSM)</strong><br />
-          Scrum Alliance<br />
-          <span style="color:var(--accent)">2012</span>
+      <div class="side-block education-block">
+        <h2 data-i18n="summary.education">Education</h2>
+        <div class="contact-item">
+          <strong class="edu-title" data-i18n="summary.edu.csm">Certified ScrumMaster (CSM)</strong><br />
+          <span data-i18n="summary.edu.csmSchool">Scrum Alliance</span><br />
+          <span class="edu-year">2012</span>
         </div>
-        <div class="contact-item" style="display:block">
-          <strong style="color:#fff">Security Management and Systems Audit Diploma</strong><br />
-          Universidad de Los Andes<br />
-          <span style="color:var(--accent)">2012</span>
+        <div class="contact-item">
+          <strong class="edu-title" data-i18n="summary.edu.audit">Security Management and Systems Audit Diploma</strong><br />
+          <span data-i18n="summary.edu.auditSchool">Universidad de Los Andes</span><br />
+          <span class="edu-year">2012</span>
         </div>
-        <div class="contact-item" style="display:block; margin-bottom:0">
-          <strong style="color:#fff">System Engineering Degree</strong><br />
-          Universidad Catolica Boliviana "San Pablo"<br />
-          <span style="color:var(--accent)">2001 - 2006</span>
+        <div class="contact-item">
+          <strong class="edu-title" data-i18n="summary.edu.engineering">System Engineering Degree</strong><br />
+          <span data-i18n="summary.edu.engineeringSchool">Universidad Catolica Boliviana "San Pablo"</span><br />
+          <span class="edu-year">2001 - 2006</span>
         </div>
       </div>
     </aside>
 
     <main class="main">
       <h1 class="name">Ricardo <strong>Flores</strong></h1>
-      <div class="role">Software Developer</div>
-      <a class="action-link" href="detailed.html">
-        <span>View Detailed CV</span>
-        <span aria-hidden="true">↗</span>
-      </a>
+      <div class="role" data-i18n="summary.role">Software Developer</div>
+      <div class="action-group">
+        <a class="action-link" href="detailed.html">
+          <span data-i18n="summary.actions.viewDetailed">View Detailed CV</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+        <button class="action-link action-button secondary" type="button" onclick="window.print()">
+          <span data-i18n="summary.actions.print">Print / Save PDF</span>
+          <span aria-hidden="true">⎙</span>
+        </button>
+      </div>
 
-      <p class="summary">
+      <p class="summary" data-i18n="summary.intro">
         Software developer with 10+ years of experience developing and maintaining enterprise-level
         applications using technologies and programming languages such as Java and C#/.NET. I contribute
         across every stage of the software development lifecycle, including design, coding, debugging,
@@ -100,14 +114,14 @@
         help customers achieve their goals.
       </p>
 
-      <h2 class="section-title">Experience</h2>
+      <h2 class="section-title" data-i18n="summary.experience">Experience</h2>
       <div class="timeline">
         <div class="item">
           <div class="item-head">
-            <span class="item-title">Software Developer <span class="item-company">CodeRoad Inc. (Towbook)</span></span>
+            <span class="item-title" data-i18n-html="summary.jobs.1.title">Software Developer <span class="item-company">| CodeRoad Inc. (Towbook)</span></span>
             <span class="item-date">Oct 2024 - Present</span>
           </div>
-          <p class="item-desc">
+          <p class="item-desc" data-i18n="summary.jobs.1.desc">
             Develop and maintain a large-scale towing platform built on .NET Framework, ASP.NET MVC,
             SQL Server, Cosmos DB, and Azure Service Bus. Lead migration and upgrades to .NET Standard
             and .NET 8, deploying services to Azure Kubernetes (AKS) via GitHub Actions.
@@ -116,10 +130,10 @@
 
         <div class="item">
           <div class="item-head">
-            <span class="item-title">Freelance Backend Developer <span class="item-company">Hakan Solutions</span></span>
+            <span class="item-title" data-i18n-html="summary.jobs.2.title">Freelance Backend Developer <span class="item-company">| Hakan Solutions</span></span>
             <span class="item-date">Apr 2020 - Feb 2023</span>
           </div>
-          <p class="item-desc">
+          <p class="item-desc" data-i18n="summary.jobs.2.desc">
             Built backend microservices for fintech products using Quarkus and PostgreSQL with Keycloak,
             plus notification services using Twilio and Amazon SES, and Libranda API integration for
             WooCommerce ebook workflows.
@@ -128,10 +142,10 @@
 
         <div class="item">
           <div class="item-head">
-            <span class="item-title">Software Developer <span class="item-company">Mojix (Towbook)</span></span>
+            <span class="item-title" data-i18n-html="summary.jobs.3.title">Software Developer <span class="item-company">| Mojix (Towbook)</span></span>
             <span class="item-date">Apr 2020 - Sep 2024</span>
           </div>
-          <p class="item-desc">
+          <p class="item-desc" data-i18n="summary.jobs.3.desc">
             Developed and maintained Towbook modules in .NET Framework, ASP.NET MVC, SQL Server,
             Cosmos DB, and Service Bus. Migrated libraries and services to .NET Standard and .NET 7
             for AKS deployments through GitHub Actions.
@@ -140,10 +154,10 @@
 
         <div class="item">
           <div class="item-head">
-            <span class="item-title">Software Engineer <span class="item-company">Mojix</span></span>
+            <span class="item-title" data-i18n-html="summary.jobs.4.title">Software Engineer <span class="item-company">| Mojix</span></span>
             <span class="item-date">Sep 2017 - Apr 2020</span>
           </div>
-          <p class="item-desc">
+          <p class="item-desc" data-i18n="summary.jobs.4.desc">
             Built and maintained backend REST APIs in Java and Spring for an enterprise IoT platform,
             using MongoDB, MySQL, Apache Kafka, and Python migration scripts.
           </p>
@@ -151,10 +165,10 @@
 
         <div class="item">
           <div class="item-head">
-            <span class="item-title">Consultant / Senior Developer <span class="item-company">IDEATI S.A. - Get Better</span></span>
+            <span class="item-title" data-i18n-html="summary.jobs.5.title">Consultant / Senior Developer <span class="item-company">| IDEATI S.A. - Get Better</span></span>
             <span class="item-date">Apr 2016 - Aug 2017</span>
           </div>
-          <p class="item-desc">
+          <p class="item-desc" data-i18n="summary.jobs.5.desc">
             Designed and developed a Tax Audit System for DGI Nicaragua using DDD, Repository and Unit of
             Work patterns in .NET Framework, Entity Framework, ASP.NET MVC, SQL Server, and Reporting Services.
           </p>
@@ -162,10 +176,10 @@
 
         <div class="item">
           <div class="item-head">
-            <span class="item-title">Consultant / Senior Developer <span class="item-company">Servicio de Impuestos Nacionales</span></span>
+            <span class="item-title" data-i18n-html="summary.jobs.6.title">Consultant / Senior Developer <span class="item-company">| Servicio de Impuestos Nacionales</span></span>
             <span class="item-date">2009 - Apr 2016</span>
           </div>
-          <p class="item-desc">
+          <p class="item-desc" data-i18n="summary.jobs.6.desc">
             Designed and developed the Galileo (MASI) BPM-based tax administration model in .NET Framework,
             Oracle, and WCF, including process engine and workflow design.
           </p>
@@ -173,10 +187,10 @@
 
         <div class="item">
           <div class="item-head">
-            <span class="item-title">Technical Analyst III <span class="item-company">Banco de Crédito BCP</span></span>
+            <span class="item-title" data-i18n-html="summary.jobs.7.title">Technical Analyst III <span class="item-company">| Banco de Crédito BCP</span></span>
             <span class="item-date">May 2008 - Jul 2009</span>
           </div>
-          <p class="item-desc">
+          <p class="item-desc" data-i18n="summary.jobs.7.desc">
             Maintained and developed Internet Banking features under CMMI and SOA using .NET Framework,
             WCF, and SQL Server.
           </p>
@@ -184,5 +198,7 @@
       </div>
     </main>
   </div>
+  <script src="theme.js" defer></script>
+  <script src="i18n.js" defer></script>
 </body>
 </html>
