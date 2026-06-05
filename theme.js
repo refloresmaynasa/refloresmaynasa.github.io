@@ -26,12 +26,17 @@
     var buttons = document.querySelectorAll(".theme-toggle");
     for (var i = 0; i < buttons.length; i += 1) {
       var button = buttons[i];
+      var darkLabel = button.getAttribute("data-label-dark") || "Dark Mode";
+      var lightLabel = button.getAttribute("data-label-light") || "Light Mode";
+      var titleDark = button.getAttribute("data-title-dark") || "Switch to dark mode";
+      var titleLight = button.getAttribute("data-title-light") || "Switch to light mode";
+
       button.setAttribute("aria-pressed", isDark ? "true" : "false");
-      button.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
+      button.setAttribute("title", isDark ? titleLight : titleDark);
 
       var label = button.querySelector("span");
       if (label) {
-        label.textContent = isDark ? "Light Mode" : "Dark Mode";
+        label.textContent = isDark ? lightLabel : darkLabel;
       }
     }
   }
@@ -49,6 +54,11 @@
         setTheme(nextIsDark ? "dark" : "light");
       });
     }
+
+    window.addEventListener("copilot-language-changed", function () {
+      var isDarkNow = document.body.classList.contains(DARK_CLASS);
+      updateToggles(isDarkNow);
+    });
   }
 
   if (document.readyState === "loading") {
